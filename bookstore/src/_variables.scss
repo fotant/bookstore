@@ -1,0 +1,22 @@
+$off-white:#f6f6f6;
+$grey:#7b7b7b;
+$light-grey:#97949b;
+$xlight-grey:#dee2e6;
+$dark-grey:#495057;
+
+$header-title: ( null: 1.6rem, 480px:1.6rem, 576px: 1.7rem, 768px: 1.8rem, 992px: 2rem, 1350px: 2.2rem, 1800px:2.5rem);
+$large-title: ( null: 1.3rem, 480px:1.3rem, 576px: 1.3rem, 768px: 1.4rem, 992px: 1.5rem, 1350px: 1.6rem, 1800px:1.7rem);
+
+@mixin font-size($fs-map) {
+  @each $fs-breakpoint,
+  $fs-font-size in $fs-map {
+      @if $fs-breakpoint==null {
+          font-size: $fs-font-size;
+      }
+      @else {
+          @media screen and (min-width: $fs-breakpoint) {
+              font-size: $fs-font-size;
+          }
+      }
+  }
+}

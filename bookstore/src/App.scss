@@ -1,0 +1,99 @@
+@import 'variables';
+
+.App {
+  padding:20px;
+  font-size:14px;
+
+  .btn-primary {
+    border:1px solid $grey;
+    background:none;
+    color:black;
+    font-size:14px;
+
+    &:hover {
+      color:white;
+      background:$grey;
+    }
+  }
+
+  header, footer {
+    background:$off-white;
+    height:70px;
+    border:1px solid $grey;
+    @include font-size($header-title);
+    font-weight:bold;
+  }
+
+  h1{
+    @include font-size($large-title);
+    font-weight:bold;
+  }
+
+  .search-box {
+    border-radius:10px;
+    border:1px solid $grey;
+    color:$light-grey;
+  }
+  
+  .item-image {
+    border:1px solid $off-white;
+    border-radius:5px;
+
+    img{
+      border-radius:3px;
+    }
+  }
+
+  .list-item {
+    .list-item-title {
+      a {
+        color:$dark-grey;
+        h2 {
+          font-size:14px;
+          font-weight:normal;
+        }
+       
+
+        &:hover {
+          a {
+            text-decoration:underline;
+          }
+        }
+
+      }
+      
+    }
+    
+  }  
+  .item {
+    .item-info {font-size:14px;}
+  }
+
+  .form-wrapper {
+    border:1px solid $grey;
+    padding:20px;
+  }
+
+  form{
+   
+
+    .error {
+      font-size:11px;
+      color:red;
+    }
+
+    .form-group {
+      input,textarea {
+        border:1px solid $xlight-grey;
+        border-radius:3px;
+        padding:5px;
+      }
+      label {
+        margin-bottom:0;
+      }
+    }
+  }
+
+ 
+    
+}
